@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PurchaseActivity" >
+
+        
+    <LinearLayout 
+        android:visibility="gone"
+        android:id="@+id/purchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        
+        android:text="Hello!\n\nI hope you like Easy Pc Control. By donating a small amount of money, you can get rid of the Ads and support the developer." />
+
+    
+    <Button android:id="@+id/b_purchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's do it!"
+        android:layout_marginTop="10dp"
+        android:onClick="purchase"
+        android:background="@drawable/bg_box_button"
+        />
+    
+    <Button android:id="@+id/b_dontpurchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Never mind"
+        android:layout_marginTop="10dp"
+        android:onClick="close"
+        android:background="@drawable/bg_box_button"
+        />
+    
+    <Button android:id="@+id/b_redditor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I am a Redditor"
+        android:layout_marginTop="10dp"
+        android:onClick="redditor"
+        android:drawableLeft="@drawable/reddit"
+        android:background="@drawable/bg_box_button"
+        />
+    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+    <ProgressBar
+        
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" 
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading..."
+        />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:visibility="gone"
+        android:id="@+id/purchased"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        
+        android:text="Thank you for supporting the development of this application.\nI hope you enjoy it and if you have any problem, don't hesitate to contact me." />
+
+    
+    <Button android:id="@+id/b_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="close"
+        android:layout_marginTop="10dp"
+        android:onClick="close"
+        android:background="@drawable/bg_box_button"
+        />
+    </LinearLayout>
+    
+
+</RelativeLayout>
